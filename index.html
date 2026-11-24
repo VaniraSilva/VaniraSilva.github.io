@@ -45,6 +45,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 .hero{padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(40px,5vw,72px)}
 .hero-top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end}
+.who{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 1px var(--line),0 0 0 5px var(--bg),0 0 0 6px var(--line)}
+.who b{display:block;font-weight:600;font-size:17px}
+.who span{color:var(--mute);font-size:14px}
 .status{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--mute);margin-bottom:22px}
 .status i{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px var(--blue-soft)}
 .hero .lead{margin-top:20px}
@@ -142,6 +146,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="wrap">
     <div class="hero-top">
       <div>
+        <div class="who"><img class="avatar" src="foto.jpg" alt="Foto de Vanira Alves da Silva" width="84" height="84"><div><b>Vanira Alves da Silva</b><span>ESG, dados e IA</span></div></div>
         <p class="status"><i></i>Aberta a vagas em Dados e IA · remoto ou híbrido</p>
         <h1>Do setor financeiro à Inteligência Artificial</h1>
         <p class="lead">Sou Vanira Alves da Silva. Passei mais de 15 anos em seguros e bancos organizando processos, dados e pessoas. Hoje uno essa bagagem, e a experiência em ESG, à formação em IA para construir soluções úteis de verdade.</p>
