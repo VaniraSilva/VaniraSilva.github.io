@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanira Silva</title>
+<meta name="description" content="Portfólio de Vanira Alves da Silva: 15+ anos no setor financeiro e de seguros, ESG e sustentabilidade, em formação em Inteligência Artificial na FIAP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE  calma, precisa, profissional: um produto bem acabado, não um currículo enfeitado
+   IDEA   a linha do tempo de uma carreira em escala real, como a página de changelog de um produto
+   PICTURE faixa de 2008 a 2029 em que 16 anos de cinza e preto viram azul: a transição para IA
+   COLOUR branco puro, tinta quase preta, cinzas suaves, um azul discreto (#2f5bea) só para IA
+   TYPE   Inter Tight 700 nos títulos + Inter no texto
+   LAYOUT laptop: título no topo, faixa do tempo larga embaixo; celular: empilhado, faixa ainda no primeiro ecrã */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0c0d10);--ink:light-dark(#111216,#ececef);--mute:light-dark(#5d616b,#9a9ea8);--line:light-dark(#e6e7ea,#23252b);--soft:light-dark(#f5f6f7,#15171b);--g1:light-dark(#d9dbe0,#2c2f36);--g2:light-dark(#a9adb6,#4b4f59);--k:light-dark(#111216,#d7d9de);--blue:light-dark(#2f5bea,#7d9bff);--blue-soft:light-dark(#e9eefd,#18203a)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.band{padding-block:clamp(48px,7vw,104px)}
+h1,h2,h3{font-family:"Inter Tight",Inter,system-ui,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:clamp(36px,5.4vw,60px);font-weight:700;max-width:16ch}
+h2{font-size:clamp(28px,3.4vw,40px);font-weight:700}
+h3{font-size:19px;font-weight:600;letter-spacing:-.01em}
+p{margin:0}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--mute);max-width:60ch}
+.mute{color:var(--mute)}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap}
+.brand{font-weight:600;text-decoration:none;letter-spacing:-.01em}
+.links{display:flex;gap:4px;flex-wrap:wrap}
+.links a{text-decoration:none;color:var(--mute);font-size:15px;padding:10px 12px;border-radius:8px}
+.links a:hover{color:var(--ink);background:var(--soft)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:10px;font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--line);background:var(--bg)}
+.btn:hover{border-color:var(--g2)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary:hover{opacity:.88}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.hero{padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(40px,5vw,72px)}
+.hero-top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--mute);margin-bottom:22px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px var(--blue-soft)}
+.hero .lead{margin-top:20px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.facts{display:grid;gap:0;border-top:1px solid var(--line)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.facts b{font-weight:600;white-space:nowrap}
+.facts span{color:var(--mute)}
+.tl{margin-top:clamp(40px,5vw,64px);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,3vw,32px)}
+.tl-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.tl-head p{font-weight:600}
+.axis{position:relative;height:22px;margin-left:var(--lab);font-size:13px;color:var(--mute)}
+.axis span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.axis span:first-child{transform:none}
+.axis span:last-child{transform:translateX(-100%)}
+.lane{display:grid;grid-template-columns:var(--lab) minmax(0,1fr);align-items:center;margin-top:10px}
+.tl{--lab:92px}
+.lane>b{font-size:13px;font-weight:500;color:var(--mute)}
+.track{position:relative;height:44px;background:var(--soft);border-radius:8px;overflow:hidden}
+.seg{position:absolute;top:0;bottom:0;border-radius:6px;transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
+.seg.future{background:repeating-linear-gradient(-45deg,var(--blue-soft) 0 6px,transparent 6px 12px)!important;border:1px dashed var(--blue)}
+.now{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--ink);z-index:2}
+.nowlab{position:absolute;top:-24px;font-size:12px;font-weight:600;transform:translateX(-50%);white-space:nowrap}
+.trackwrap{position:relative}
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px 24px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.key{display:grid;grid-template-columns:12px minmax(0,1fr);gap:10px;font-size:14px;line-height:1.45}
+.key i{width:12px;height:12px;border-radius:3px;margin-top:4px}
+.key b{display:block;font-weight:600}
+.key span{color:var(--mute)}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){.seg{animation:none}html{scroll-behavior:auto}}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,5vw,72px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.alt{background:var(--soft);border-block:1px solid var(--line)}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px)}
+.about p+p{margin-top:16px}
+.about .big{font-size:clamp(20px,2vw,24px);line-height:1.45;letter-spacing:-.01em;font-weight:500}
+.pillars{display:grid;gap:12px}
+.pillar{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.pillar p{color:var(--mute);font-size:15px;margin-top:6px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{font:inherit;font-size:14px;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--mute);cursor:pointer}
+.filters button:hover{color:var(--ink);border-color:var(--g2)}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--bg);transition:border-color .2s}
+.card:hover{border-color:var(--g2)}
+.card .meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--mute);margin-bottom:14px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--g2)}
+.badge.on i{background:var(--blue)}
+.card p.d{color:var(--mute);margin-top:10px;font-size:15px}
+.card ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px}
+.card li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px}
+.card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g2);margin-top:9px;margin-left:4px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:20px}
+.tags span{font-size:13px;padding:4px 10px;border-radius:6px;background:var(--soft);color:var(--mute);white-space:nowrap}
+.empty{display:none;color:var(--mute);padding:24px 0}
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.skill{border-top:2px solid var(--ink);padding-top:18px}
+.skill.ai{border-color:var(--blue)}
+.skill ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:9px;font-size:15px}
+.skill li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:9px}
+.skill li small{color:var(--mute);font-size:13px;white-space:nowrap}
+.consult{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.flow{border:1px solid var(--line);border-radius:16px;background:var(--bg);padding:8px}
+.step{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:16px;align-items:start}
+.step+.step{border-top:1px solid var(--line)}
+.step i{width:40px;height:40px;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-style:normal;font-weight:600;font-size:14px;color:var(--mute)}
+.step.on i{background:var(--blue-soft);color:var(--blue)}
+.step p{color:var(--mute);font-size:15px;margin-top:2px}
+.contact{text-align:left;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end}
+.contact .ctas{margin-top:0;justify-content:flex-end}
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:860px){.hero-top,.sec-head,.about,.consult,.contact{grid-template-columns:minmax(0,1fr)}.skills{grid-template-columns:minmax(0,1fr)}.contact .ctas{justify-content:flex-start}}
+@media(max-width:720px){.grid{grid-template-columns:minmax(0,1fr)}.tl{--lab:0px}.lane{grid-template-columns:minmax(0,1fr);gap:6px}.lane+.lane{margin-top:18px}.links a.hide-s{display:none}}
+@media(max-width:480px){.axis span:nth-child(even){display:none}.facts div{flex-direction:column;gap:2px}}
+</style>
+</head>
+<body>
+<nav aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="#topo">Vanira Silva</a>
+    <div class="links">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#competencias" class="hide-s">Competências</a>
+      <a href="#consultoria" class="hide-s">Consultoria</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="topo">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <p class="status"><i></i>Aberta a vagas em Dados e IA · remoto ou híbrido</p>
+        <h1>Do setor financeiro à Inteligência Artificial</h1>
+        <p class="lead">Sou Vanira Alves da Silva. Passei mais de 15 anos em seguros e bancos organizando processos, dados e pessoas. Hoje uno essa bagagem, e a experiência em ESG, à formação em IA para construir soluções úteis de verdade.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#projetos">Ver projetos</a>
+          <a class="btn" href="https://www.linkedin.com/in/vanirasilva" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/VaniraSilva" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="facts" aria-label="Resumo">
+        <div><b>Hoje</b><span>Bradesco · Comunidade e Voluntariado</span></div>
+        <div><b>Formação</b><span>Graduação em IA · FIAP, 2026–2029</span></div>
+        <div><b>Foco</b><span>Python, dados, machine learning, automação</span></div>
+        <div><b>Base</b><span>Osasco, SP</span></div>
+      </div>
+    </div>
+
+    <section class="tl" aria-label="Linha do tempo da carreira">
+      <div class="tl-head"><p>Trajetória em escala real</p><span class="mute" style="font-size:14px">2008 a 2029</span></div>
+      <div class="axis" id="axis"></div>
+      <div class="lane"><b>Carreira</b><div class="trackwrap"><div class="track" id="lane-work"></div></div></div>
+      <div class="lane"><b>Formação</b><div class="trackwrap"><div class="track" id="lane-edu"></div></div></div>
+      <div class="keys" id="keys"></div>
+    </section>
+  </div>
+</header>
+
+<section class="band alt" id="sobre">
+  <div class="wrap about">
+    <div>
+      <h2>Organização, processos e agora dados</h2>
+      <p class="big" style="margin-top:24px">Meu diferencial é juntar duas coisas que raramente andam juntas: a visão de negócio e de impacto social do ESG e as ferramentas de dados e IA.</p>
+    </div>
+    <div>
+      <p>Comecei em emissão de transportes na Tokio Marine, fui por mais de nove anos Technical Analyst na Sompo Seguros e cheguei ao Bradesco em 2025, primeiro em Finanças Sustentáveis e Mudanças Climáticas e, desde abril de 2026, em Conexão com a Comunidade e Voluntariado.</p>
+      <p>Em agosto de 2026 comecei a graduação em Inteligência Artificial na FIAP. Desde então construo projetos com Python, R, Pandas, Scikit-learn, Oracle e ESP32, sempre documentados no GitHub e entregues com vídeo.</p>
+      <div class="pillars" style="margin-top:28px">
+        <div class="pillar"><h3>Mentalidade de produto</h3><p>Começo pela dor de quem usa, testo algo simples e ajusto com feedback.</p></div>
+        <div class="pillar"><h3>Curiosa, analítica e estratégica</h3><p>Gosto de entender o porquê dos números antes de propor uma solução.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="projetos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Projetos</h2>
+      <p class="lead">Trabalhos da graduação em IA e ferramentas que criei para mim. Os repositórios acadêmicos são privados por regra da FIAP; posso apresentá-los em entrevista.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrar projetos" id="filters"></div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty">Nenhum projeto nesta categoria ainda.</p>
+  </div>
+</section>
+
+<section class="band alt" id="competencias">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Competências</h2>
+      <p class="lead">Quinze anos de base corporativa, somados a uma caixa de ferramentas técnicas que cresce a cada fase do curso.</p>
+    </div>
+    <div class="skills" id="skills"></div>
+  </div>
+</section>
+
+<section class="band" id="consultoria">
+  <div class="wrap consult">
+    <div>
+      <h2>IA para profissionais autônomos</h2>
+      <p class="lead" style="margin-top:20px">Em paralelo à carreira, estou estruturando uma consultoria para quem trabalha por conta própria e perde horas com tarefas repetitivas. A ideia é começar pequeno, ouvir as dores reais e evoluir com o cliente.</p>
+      <div class="ctas"><a class="btn primary" href="#contato">Conversar sobre uma ideia</a></div>
+    </div>
+    <div class="flow" aria-label="Exemplo de automação">
+      <div class="step"><i>1</i><div><h3>Cliente desmarca</h3><p>Um horário fica vago na agenda de uma esteticista, por exemplo.</p></div></div>
+      <div class="step on"><i>2</i><div><h3>A automação entra em ação</h3><p>Identifica quem está na lista de espera e tem preferência por aquele horário.</p></div></div>
+      <div class="step on"><i>3</i><div><h3>Convite enviado</h3><p>A mensagem sai automaticamente e quem confirmar primeiro fica com a vaga.</p></div></div>
+      <div class="step"><i>4</i><div><h3>Agenda cheia de novo</h3><p>Sem planilha, sem dez mensagens manuais, sem horário perdido.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="contato">
+  <div class="wrap contact">
+    <div>
+      <h2>Vamos conversar?</h2>
+      <p class="lead" style="margin-top:16px">Busco uma vaga de Analista em Dados ou IA, de preferência em bancos, fintechs e empresas de tecnologia, e projetos de consultoria em automação.</p>
+    </div>
+    <div class="ctas">
+      <a class="btn primary" href="https://www.linkedin.com/in/vanirasilva" target="_blank" rel="noopener">Falar no LinkedIn</a>
+      <a class="btn" href="https://github.com/VaniraSilva" target="_blank" rel="noopener">github.com/VaniraSilva</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Vanira Alves da Silva · <span id="yr">2026</span></span>
+    <span>Feito em HTML, CSS e JavaScript puro</span>
+  </div>
+</footer>
+
+<script>
+{
+  const START = 2008, END = 2029, NOW = 2026.9;
+  const pos = y => ((y - START) / (END - START) * 100);
+
+  const work = [
+    { from: 2008.83, to: 2015.3, color: 'var(--g1)', name: 'Tokio Marine', role: 'Analista de Emissão de Transportes', when: 'nov/2008 – abr/2015' },
+    { from: 2015.33, to: 2024.6, color: 'var(--g2)', name: 'Sompo Seguros', role: 'Technical Analyst', when: 'mai/2015 – ago/2024' },
+    { from: 2025.17, to: 2026.25, color: 'var(--k)', name: 'Bradesco · ESG', role: 'Finanças Sustentáveis e Mudanças Climáticas', when: 'mar/2025 – abr/2026' },
+    { from: 2026.25, to: NOW, color: 'var(--blue)', name: 'Bradesco · Comunidade', role: 'Conexão com a Comunidade e Voluntariado', when: 'abr/2026 – hoje' }
+  ];
+  const edu = [
+    { from: 2026.6, to: NOW, color: 'var(--blue)', name: 'FIAP', role: 'Graduação em Inteligência Artificial', when: 'ago/2026 – 2029' },
+    { from: NOW, to: END, future: true }
+  ];
+
+  const seg = (s, i) => `<div class="seg${s.future ? ' future' : ''}" style="left:${pos(s.from)}%;width:${pos(s.to) - pos(s.from)}%;background:${s.color || 'none'};animation-delay:${i * 0.12}s"></div>`;
+  const now = `<div class="now" style="left:${pos(NOW)}%"></div>`;
+  document.getElementById('lane-work').innerHTML = work.map(seg).join('') + now;
+  document.getElementById('lane-edu').innerHTML = edu.map(seg).join('') + now;
+  document.getElementById('lane-work').parentElement.insertAdjacentHTML('beforeend', `<span class="nowlab" style="left:${pos(NOW)}%">hoje</span>`);
+
+  const ticks = [2008, 2012, 2016, 2020, 2024, 2029];
+  document.getElementById('axis').innerHTML = ticks.map(t => `<span style="left:${pos(t)}%">${t}</span>`).join('');
+
+  document.getElementById('keys').innerHTML = [...work, edu[0]].map(k =>
+    `<div class="key"><i style="background:${k.color}"></i><div><b>${k.name}</b><span>${k.role}<br>${k.when}</span></div></div>`
+  ).join('');
+
+  const projects = [
+    { cat: 'dados', title: 'FarmTech Solutions: irrigação inteligente', ctx: 'FIAP · Fase 3', state: 'Entregue', on: false,
+      desc: 'Pipeline completo de dados de um sistema de irrigação com ESP32 para cultivo de tomate: das leituras dos sensores ao banco Oracle.',
+      pts: ['87 leituras tratadas com Pandas e NumPy, 4 gráficos interpretados', 'Carga em Oracle com script Python repetível, sem duplicar registros', '5 consultas SQL de gestão validadas contra os números do Pandas'],
+      tags: ['Python', 'Pandas', 'NumPy', 'Oracle SQL', 'ESP32'] },
+    { cat: 'ml', title: 'Classificação de culturas agrícolas', ctx: 'FIAP · Fase 3', state: 'Entregue', on: false,
+      desc: 'Modelagem de IA para recomendar a cultura ideal a partir de dados de solo e clima.',
+      pts: ['Análise exploratória com 10 gráficos e narrativa', 'Teste de Kruskal-Wallis para o perfil ideal de 3 culturas', '5 modelos comparados com validação cruzada e matriz de confusão'],
+      tags: ['Scikit-learn', 'Random Forest', 'SVM', 'KNN', 'Google Colab'] },
+    { cat: 'produto', title: 'Redução de custos de frota · Sem Parar Empresas', ctx: 'FIAP · Enterprise Challenge', state: 'Sprints 1 e 2 entregues', on: true,
+      desc: 'Proposta de calculadora que diagnostica custos de frota e recomenda um plano de ação, em parceria com a Sem Parar Empresas.',
+      pts: ['User stories para gestor de frota, CFO e Sem Parar', 'Arquitetura: entrada, tratamento, diagnóstico, benchmark e recomendações', 'Projeto concorrendo ao pódio do Festival NEXT, com o Grupo Nexus IA'],
+      tags: ['Product Thinking', 'Arquitetura de dados', 'Scrum', 'Trello'] },
+    { cat: 'ml', title: 'Global Solution · CitizenTech', ctx: 'FIAP · Global Solution 2026.2', state: 'Entregue', on: false,
+      desc: 'Prova de conceito de IA para um problema real da sociedade, desenvolvida em trio no desafio CitizenTech.',
+      pts: ['Solução com dados, análise e modelos de machine learning', 'Documentação completa no padrão do repositório da FIAP', 'Minha parte: estrutura e gestão do repositório no GitHub'],
+      tags: ['Python', 'Machine learning', 'GitHub', 'Trabalho em equipe'] },
+    { cat: 'ml', title: 'FarmTech · modelo preditivo e painel', ctx: 'FIAP · Fase 4', state: 'Em andamento', on: true,
+      desc: 'Evolução do sistema de irrigação: prever quando irrigar e acompanhar tudo em um painel com login.',
+      pts: ['Modelo preditivo em Scikit-learn comparado com a regra fixa anterior', 'Painel Streamlit com sensores, bomba, previsões e ocorrências de campo', 'Minha parte: repositório, regras de negócio, segurança (.env, login, log com hash) e README'],
+      tags: ['Scikit-learn', 'Streamlit', 'Oracle', 'Segurança'] },
+    { cat: 'produto', title: 'Dashboard de estudos', ctx: 'Projeto pessoal', state: 'Em uso', on: false,
+      desc: 'Painel que organiza minha rotina de estudos da graduação em um só lugar.',
+      pts: ['Pomodoro, tarefas, progresso e metas', 'Cronograma e notas por disciplina', 'Feito em HTML, CSS e JavaScript puro'],
+      tags: ['HTML', 'CSS', 'JavaScript'] },
+    { cat: 'produto', title: 'Fichário digital de estudos', ctx: 'Projeto pessoal', state: 'Em uso', on: false,
+      desc: 'Caderno digital para tablet com divisórias, planner e áreas de anotação para cada matéria.',
+      pts: ['Divisórias coloridas por disciplina', 'Planner, post-its e áreas de lettering', 'Pensado para uso diário no tablet'],
+      tags: ['Design', 'Organização', 'UX'] }
+  ];
+  const cats = [['todos', 'Todos'], ['dados', 'Dados e SQL'], ['ml', 'Machine learning'], ['produto', 'Produto e organização']];
+
+  const card = p => `<article class="card">
+      <div class="meta"><span>${p.ctx}</span><span class="badge${p.on ? ' on' : ''}"><i></i>${p.state}</span></div>
+      <h3>${p.title}</h3><p class="d">${p.desc}</p>
+      <ul>${p.pts.map(x => `<li>${x}</li>`).join('')}</ul>
+      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+    </article>`;
+  const grid = document.getElementById('grid'), empty = document.getElementById('empty'), filters = document.getElementById('filters');
+  const show = c => {
+    const list = projects.filter(p => c === 'todos' || p.cat === c);
+    grid.innerHTML = list.map(card).join('');
+    empty.style.display = list.length ? 'none' : 'block';
+    filters.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.c === c));
+  };
+  filters.innerHTML = cats.map(([c, l]) => `<button type="button" id="f-${c}" data-c="${c}" aria-pressed="false">${l}</button>`).join('');
+  filters.addEventListener('click', e => { const b = e.target.closest('button'); if (b) show(b.dataset.c); });
+  show('todos');
+
+  const skills = [
+    { t: 'Dados e IA', ai: true, items: [['Python, Pandas, NumPy', 'em uso'], ['Scikit-learn', 'em uso'], ['SQL e Oracle', 'em uso'], ['R', 'estudando'], ['IA Generativa', 'em uso'], ['Power BI', 'estudando']] },
+    { t: 'Ferramentas', items: [['GitHub e GitHub Pages', 'em uso'], ['Google Colab e Jupyter', 'em uso'], ['Streamlit', 'estudando'], ['ESP32 e Wokwi', 'em uso'], ['SharePoint', 'em uso'], ['Automações', 'em uso']] },
+    { t: 'Negócio', items: [['ESG e sustentabilidade', '2025+'], ['Voluntariado corporativo', '2026+'], ['Melhoria de processos', '15+ anos'], ['Gestão de projetos e Scrum', ''], ['Product Thinking', ''], ['Relacionamento com stakeholders', '']] }
+  ];
+  document.getElementById('skills').innerHTML = skills.map(s =>
+    `<div class="skill${s.ai ? ' ai' : ''}"><h3>${s.t}</h3><ul>${s.items.map(([n, l]) => `<li><span>${n}</span>${l ? `<small>${l}</small>` : ''}</li>`).join('')}</ul></div>`
+  ).join('');
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+}
+</script>
+</body>
+</html>
